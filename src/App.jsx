@@ -1,11 +1,14 @@
 import React from 'react'
-import ICD10LearningSystem from './components/ICD10LearningSystem'
+import { AuthProvider } from './contexts/AuthContext'
+import ICD10LearningSystemWithAuth from './components/ICD10LearningSystemWithAuth'
 
 function App() {
   return (
-    <div className="App">
-      <ICD10LearningSystem />
-    </div>
+    <AuthProvider>
+      <div className="App">
+        <ICD10LearningSystemWithAuth />
+      </div>
+    </AuthProvider>
   )
 }
 
